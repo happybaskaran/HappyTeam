@@ -1,0 +1,5 @@
+LICENSE.txt
+README.txt
+node_modules/
+package-lock.json
+server.log
