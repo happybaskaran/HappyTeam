@@ -6,7 +6,7 @@ var path = require('path');
 let port = process.env.PORT || 3000;
 var app = express();
 
-hbs.registerPartials(__dirname+'/Views/partials')
+hbs.registerPartials(__dirname+'/views/partials')
 app.set('view engine','hbs');
 app.use(express.static(__dirname+'/public'));
 app.use("/public/assets",express.static(__dirname+'/public/assets'));
