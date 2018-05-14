@@ -15,12 +15,7 @@
 		<!-- Header -->
 			<header id="header">
 				<a href="#" class="title">{{Heading}}<i class="em em-headphones"></i></a>
-				<nav>
-					<ul>
-						<li><a href="/">Home</a></li>
-						<li><a href="/explore" class="active">Explore</a></li>
-					</ul>
-				</nav>
+				{{> link}}
 			</header>
 
 		<!-- Wrapper -->
@@ -30,7 +25,31 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h2 class="major">{{BHeader}}</h1>
-                <p>Developer are Busy!!! <i class="em em-disappointed"></i></p>
+								<section>
+									<form name = "listenform" method="post" action="/listenit">
+										<div class="row uniform">
+											<div class="6u 12u$(xsmall)">
+												<input type="text" name="uname" id="uname" value="" placeholder="Name" required/>
+											</div>
+											<div class="12u$">
+												<textarea name="text2speech" id="text2speech" placeholder="Type or Copy Paste here" rows="6" required></textarea>
+											</div>
+											<div class="12u$">
+												<ul class="actions">
+													<li><input type="submit" value="Listen" class="button scrolly"/></li>
+													<li><input type="reset" value="Reset" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+								</section>
+								<div class="features" >
+									<section id='#result'>
+												<h4>Your Result is here!!</h4>
+												<p>Enjoy listening.</p>
+												<p>Your Content are {{UserContent}} {{userResult}} </p>
+									</section>
+								</div>
 							</div>
 					</section>
 
@@ -38,14 +57,6 @@
 
 		<!-- Footer -->
 		{{> footer}}
-		<!-- <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-		<footer id="footer" class="wrapper style1-alt" align="center">
-			<div class="inner">
-				<ul class="menu">
-					<li>&copy;Happy. All rights reserved.</li><li>Designed By:HappyTeam <i class="em em-heart"></i></li>
-				</ul>
-			</div>
-		</footer> -->
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -53,6 +64,7 @@
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 
