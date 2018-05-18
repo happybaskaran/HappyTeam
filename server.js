@@ -46,7 +46,7 @@ app.get('/jollyday',(req,res)=>{
 app.post('/listenit',(req,res)=>{
   let texttospeak = req.body.text2speech;
   let voices = [
-      { voice: 'Microsoft Zira Desktop', text: texttospeak }
+      { voice: 'Alex', text: texttospeak }
   ]
   //console.log(texttospeak);
   res.render('listenit.hbs',{
